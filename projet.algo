@@ -1,0 +1,24 @@
+ALGORITHM projetAlgo
+VAR
+    phrase:STRING;
+    countMots, countLettres, countVoyelles:INTEGER;
+    c:CHAR;
+    countLettres:=0;
+    countMots:=0;
+    countVoyelles:=0;
+
+BEGIN
+    Read("phrase");
+WHILE (c<>".") DO
+    countLettres:= countLettres+1
+  IF (c=" ") THEN
+      countMots:= countMots +1;
+  END_IF
+  IF (c in ["a", "A", "e", "E", "i", "I", "o", "O", "u", "U"]) THEN
+      countVoyelles= countVoyelles +1;
+  END_IF
+END_WHILE
+Write("nombres des mots" = countMots);
+write ("nombres des lettres" = countLettres;);
+write ("nombres des voyelles" = countVoyelles);
+END
